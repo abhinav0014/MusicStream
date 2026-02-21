@@ -4,8 +4,8 @@ export async function verifyAdminCredentials(
   username: string,
   password: string
 ): Promise<boolean> {
-  const adminUsername = process.env.ADMIN_USERNAME || 'admin'
-  const adminPasswordHash = process.env.ADMIN_PASSWORD_HASH || ''
+  const adminUsername = 'admin'
+  const adminPasswordHash = '$2a$12$4yGGV9RB0RYSsahYMzLnEu7zRevcrv.CGk/LBqRyG/zPxq6V6TJ5u'
 
   if (username !== adminUsername) return false
   if (!adminPasswordHash) return false
