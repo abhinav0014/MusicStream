@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === "production";
+const isProd = true;
 
 // Replace 'your-repo-name' with your actual GitHub repository name
-const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1] || "music-app";
+const repoName = "MusicStream";
 
 const nextConfig = {
   // Required for GitHub Pages static export
