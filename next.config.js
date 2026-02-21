@@ -1,17 +1,11 @@
 /** @type {import('next').NextConfig} */
-const isProd = true;
-
-// Replace 'your-repo-name' with your actual GitHub repository name
-const repoName = "MusicStream";
-
 const nextConfig = {
   // Required for GitHub Pages static export
-  output: "export",
+  output: "default",
 
   // GitHub Pages serves from /<repo-name>/ so we need this basePath
-  basePath: isProd ? `/${repoName}` : "",
-  assetPrefix: isProd ? `/${repoName}/` : "",
-
+  basePath:  "",
+  assetPrefix: "",
   images: {
     // Static export doesn't support next/image optimization
     // Use unoptimized so img tags work on GitHub Pages
