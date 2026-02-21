@@ -1,4 +1,4 @@
-import { getIronSession, IronSession, IronSessionOptions } from 'iron-session'
+import { getIronSession, IronSession, SessionOptions } from 'iron-session'
 import { cookies } from 'next/headers'
 import { NextRequest, NextResponse } from 'next/server'
 
@@ -7,7 +7,7 @@ export interface SessionData {
   username?: string
 }
 
-export const sessionOptions: IronSessionOptions = {
+export const sessionOptions: SessionOptions = {
   password: process.env.SESSION_SECRET || 'fallback-secret-change-in-production-32chars',
   cookieName: 'music-admin-session',
   cookieOptions: {
